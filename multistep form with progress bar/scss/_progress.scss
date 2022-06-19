@@ -1,0 +1,82 @@
+.progress{
+    position: relative;
+//   background-color: rgb(28, 205, 211);
+  padding-bottom:30px;
+}
+
+.progress-list{
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-evenly;
+ 
+& > li{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgb(216, 210, 210);    
+    list-style: none;
+    transition: 600ms;
+    z-index: 1;
+}
+&>li.active{
+    background-color: rgb(97, 2, 134);
+    animation: none;
+}
+}
+
+.progress-list > .line{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 10%;
+    width: 100%;
+        
+    background-color: rgb(216, 210, 210);
+}
+.progress-list > .progress-line{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    height: 10%;
+    width: $width;      
+    background-color: rgb(97, 2, 134);
+    transition: 600ms;
+}
+
+.progress-list>li>strong{
+    position: absolute;
+    top: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.4rem;
+}
+.progress-list>li>i{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.6rem;
+    color: white;
+}
+
+.progressbar{
+    position: relative;
+    width: 100%;
+    height: 30px;
+    border-radius: 15px;
+    background-color: rgb(216, 210, 210);
+    margin: 20px 0;
+}
+.progressbar-fill{
+    position: absolute;
+    border-radius: 15px;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: $width;  
+    background-color: rgb(97, 2, 134);
+    transition: 600ms;
+}

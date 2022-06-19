@@ -1,0 +1,26 @@
+.multistep-form{
+    position: relative;
+    width: 500px;
+    align-self: flex-start;
+    // background-color: pink;
+}
+.form-step{
+    display: none;
+    
+}
+.active{
+   display: flex;
+   flex-wrap: wrap;
+   animation: shadow 1s ease-in-out;
+}
+
+@keyframes shadow {
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+
+    }
+}

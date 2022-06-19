@@ -1,0 +1,70 @@
+.form-card{
+    width: 100%;
+    &>input{
+    width: 100%;
+    height: 3.6rem;
+    font-size: 1.6rem;
+    background-color: rgb(243, 241, 241);
+    border: 1px solid gray;
+    padding-left: 14px;
+    }
+    &>input:focus{
+        border: none;
+        outline: 1.4px solid rgb(16, 16, 197);
+    }
+    &>label{
+        font-size: 1.6rem;
+        color:rgb(77, 73, 73);
+        display: block;
+        width: 100%;
+        margin: 16px 0;
+    }
+}
+.info{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 0 ;
+    font-size: 1.6rem;
+}
+
+.account-info{
+    color: rgb(123, 38, 180);
+    font-weight: normal;
+    
+}
+.step{
+    color:rgb(126, 123, 123);
+    font-weight: normal;
+    
+}
+input[type="file"]{
+    height: 6rem;
+  padding-top: 16px;
+}
+.finish-view{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+    &> span{
+    display: block;
+    font-size: 10rem;
+    color: rgb(97, 2, 134);
+
+    
+    }
+    &>h2{
+        display: block;
+        width: 100%;
+        text-align: center;
+        font-size: 3rem;
+        font-weight: normal;
+        color: rgb(97, 2, 134);
+
+    }
+}

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multistep form with progress bar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <h2>Utwórz swoje konto</h2>
+            <p>Wypełnij wszystkie pola formularza aby przejść do następnego kroku</p>
+        </div>
+
+        <form class="multistep-form">
+            <div class="progress">
+                <ul class="progress-list">
+                    <li id="account"><i class="fa-solid fa-unlock"></i><strong>Konto</strong></li>
+                    <li id="personal"><i class="fa-solid fa-user"></i><strong>Osobiste</strong></li>
+                    <li id="payment"><i class="fa-solid fa-camera"></i><strong>Zdjęcie</strong></li>
+                    <li id="confirm"><i class="fa-solid fa-check"></i><strong>Koniec</strong></li>
+                    <div class="line"></div>
+                    <div class="progress-line"></div>
+                </ul>
+            </div>
+            <div class="progressbar">
+                <div class="progressbar-fill"></div>
+            </div>
+            <div class="form-step">
+                <div class="form-card">
+                    <div class="info">
+                        <div class="account">
+                            <h2 class="account-info">Informacje Konta</h2>
+                        </div>
+                        <div class="steps">
+                            <h2 class="step">Krok 1 - 4</h2>
+                        </div>
+                    </div>
+
+                    <label class="fieldlabels">Email: *</label> <input type="email" name="email" placeholder="Email"
+                        required />
+                    <label class="fieldlabels">Login: *</label> <input type="text" name="username" placeholder="Login"
+                        required /> <label class="fieldlabels">Hasło: *</label> <input type="password" name="password"
+                        placeholder="Hasło" /> <label class="fieldlabels">Potwierdź hasło: *</label>
+                    <input type="password" name="confirmpassword" placeholder="Potwierdź Hasło" />
+                </div>
+                <div class="buttons">
+                    <input type="button" name="next" value="Dalej" />
+                </div>
+
+            </div>
+
+            <div class="form-step">
+
+                <div class="form-card">
+                    <div class="info">
+                        <div class="account">
+                            <h2 class="account-info">Informacje Osobiste</h2>
+                        </div>
+                        <div class="steps">
+                            <h2 class="step">Krok 2 - 4</h2>
+                        </div>
+
+                    </div>
+
+
+
+                    <label class="fieldlabels">Imię: *</label> <input type="text" name="firstname" placeholder="Imię" />
+                    <label class="fieldlabels">Nazwisko: *</label> <input type="text" name="lastname"
+                        placeholder="Nazwisko" /> <label class="fieldlabels">Numer Kontaktowy:
+                        *</label>
+                    <input type="number" name="contactnumber" placeholder="Numer Kontaktowy" /> <label
+                        class="fieldlabels">Numer Kontaktowy nr.2: *</label> <input type="number" name="contactnumber2"
+                        placeholder="Numer Kontaktowy nr.2" />
+                </div>
+                <div class="buttons">
+                    <input type="button" name="previous" value="Cofnij" />
+                    <input type="button" name="next" value="Dalej" />
+                </div>
+            </div>
+
+
+
+            <div class="form-step">
+                <div class="form-card">
+                    <div class="info">
+                        <div class="account">
+                            <h2 class="account-info">Prześlij zdjęcie</h2>
+                        </div>
+                        <div class="steps">
+                            <h2 class="step">Krok 3 - 4</h2>
+                        </div>
+
+                    </div>
+
+                    <label class="fieldlabels">Prześlij swoje zdjęcie:</label> <input type="file" name="photo"
+                        accept="image/*">
+                    <label class="fieldlabels">Prześlij inne zdjęcie:</label> <input type="file" name="photo"
+                        accept="image/*">
+                </div>
+                <div class="buttons">
+                    <input type="button" name="previous" value="Cofnij" />
+                    <input type="submit" name="submit" value="Zatwierdź" />
+                </div>
+                <div class="message"></div>
+
+            </div>
+
+            <div class="form-step">
+                <div class="form-card">
+                    <div class="info">
+                        <div class="account">
+                            <h2 class="account-info">Koniec</h2>
+                        </div>
+                        <div class="steps">
+                            <h2 class="step">Krok 4 - 4</h2>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="finish-view">
+                    <span class="fa-solid fa-check"></span>
+                    <h2>Pomyślnie utworzyłeś swoje konto!</h2>
+                </div>
+            </div>
+
+        </form>
+    </div>
+
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
